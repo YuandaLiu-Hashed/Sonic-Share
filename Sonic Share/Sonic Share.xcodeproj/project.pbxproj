@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAA540DC290355090043D4CC /* HammingCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAA540DA290355090043D4CC /* HammingCode.cpp */; };
+		BAA540DE2904BAA00043D4CC /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA540DD2904BAA00043D4CC /* SendView.swift */; };
+		BAA540E02904D4390043D4CC /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA540DF2904D4390043D4CC /* ReceiveView.swift */; };
+		BABEDDDC29008B2700E9D2D2 /* SonicShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDDB29008B2700E9D2D2 /* SonicShareApp.swift */; };
+		BABEDDDE29008B2700E9D2D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDDD29008B2700E9D2D2 /* ContentView.swift */; };
+		BABEDDE029008B2800E9D2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABEDDDF29008B2800E9D2D2 /* Assets.xcassets */; };
+		BABEDDE329008B2800E9D2D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABEDDE229008B2800E9D2D2 /* Preview Assets.xcassets */; };
+		BABEDDEA29008BAD00E9D2D2 /* Audio System.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDE929008BAD00E9D2D2 /* Audio System.swift */; };
+		BABEDDED29008CFF00E9D2D2 /* CAudioSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDEC29008CFF00E9D2D2 /* CAudioSystem.mm */; };
+		BABEDDF229008DC100E9D2D2 /* CReceiver.mm in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDF129008DC100E9D2D2 /* CReceiver.mm */; };
+		BABEDDF529008DE000E9D2D2 /* CSender.mm in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDF329008DE000E9D2D2 /* CSender.mm */; };
+		BABEDDF82900925D00E9D2D2 /* CircularBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = BABEDDF62900925D00E9D2D2 /* CircularBuffer.mm */; };
+		BABEDE0229009A7700E9D2D2 /* Circular Buffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = BABEDE0129009A7700E9D2D2 /* Circular Buffer.mm */; };
+		BABEDE0A2900AB8800E9D2D2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEDE092900AB8700E9D2D2 /* Accelerate.framework */; };
+		BABEDE102900E3D700E9D2D2 /* FastTrig2Pi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BABEDE0E2900E3D700E9D2D2 /* FastTrig2Pi.cpp */; };
+		BABEDE132901F8A600E9D2D2 /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BABEDE112901F8A600E9D2D2 /* Shared.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BABEDE0329009A7700E9D2D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABEDDD029008B2700E9D2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BABEDDD729008B2700E9D2D2;
+			remoteInfo = "Sonic Share";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA24135A29023B950006806C /* Sonic Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sonic Share.entitlements"; sourceTree = "<group>"; };
+		BAA540DA290355090043D4CC /* HammingCode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HammingCode.cpp; sourceTree = "<group>"; };
+		BAA540DB290355090043D4CC /* HammingCode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HammingCode.hpp; sourceTree = "<group>"; };
+		BAA540DD2904BAA00043D4CC /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
+		BAA540DF2904D4390043D4CC /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
+		BABEDDD829008B2700E9D2D2 /* Sonic Share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sonic Share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABEDDDB29008B2700E9D2D2 /* SonicShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonicShareApp.swift; sourceTree = "<group>"; };
+		BABEDDDD29008B2700E9D2D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BABEDDDF29008B2800E9D2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BABEDDE229008B2800E9D2D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BABEDDE929008BAD00E9D2D2 /* Audio System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio System.swift"; sourceTree = "<group>"; };
+		BABEDDEB29008CFE00E9D2D2 /* Sonic Share-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sonic Share-Bridging-Header.h"; sourceTree = "<group>"; };
+		BABEDDEC29008CFF00E9D2D2 /* CAudioSystem.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CAudioSystem.mm; sourceTree = "<group>"; };
+		BABEDDEE29008D1A00E9D2D2 /* CAudioSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAudioSystem.h; sourceTree = "<group>"; };
+		BABEDDF029008DC100E9D2D2 /* CReceiver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CReceiver.hpp; sourceTree = "<group>"; };
+		BABEDDF129008DC100E9D2D2 /* CReceiver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CReceiver.mm; sourceTree = "<group>"; };
+		BABEDDF329008DE000E9D2D2 /* CSender.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CSender.mm; sourceTree = "<group>"; };
+		BABEDDF429008DE000E9D2D2 /* CSender.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSender.hpp; sourceTree = "<group>"; };
+		BABEDDF62900925D00E9D2D2 /* CircularBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CircularBuffer.mm; sourceTree = "<group>"; };
+		BABEDDF72900925D00E9D2D2 /* CircularBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularBuffer.hpp; sourceTree = "<group>"; };
+		BABEDDFF29009A7600E9D2D2 /* Sonic Share Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sonic Share Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABEDE0129009A7700E9D2D2 /* Circular Buffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Circular Buffer.mm"; sourceTree = "<group>"; };
+		BABEDE092900AB8700E9D2D2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		BABEDE0E2900E3D700E9D2D2 /* FastTrig2Pi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FastTrig2Pi.cpp; sourceTree = "<group>"; };
+		BABEDE0F2900E3D700E9D2D2 /* FastTrig2Pi.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastTrig2Pi.hpp; sourceTree = "<group>"; };
+		BABEDE112901F8A600E9D2D2 /* Shared.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shared.cpp; sourceTree = "<group>"; };
+		BABEDE122901F8A600E9D2D2 /* Shared.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shared.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BABEDDD529008B2700E9D2D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABEDE0A2900AB8800E9D2D2 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABEDDFC29009A7600E9D2D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BABEDDCF29008B2700E9D2D2 = {
+			isa = PBXGroup;
+			children = (
+				BABEDDDA29008B2700E9D2D2 /* Sonic Share */,
+				BABEDE0029009A7600E9D2D2 /* Sonic Share Tests */,
+				BABEDDD929008B2700E9D2D2 /* Products */,
+				BABEDE082900AB8700E9D2D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BABEDDD929008B2700E9D2D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BABEDDD829008B2700E9D2D2 /* Sonic Share.app */,
+				BABEDDFF29009A7600E9D2D2 /* Sonic Share Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BABEDDDA29008B2700E9D2D2 /* Sonic Share */ = {
+			isa = PBXGroup;
+			children = (
+				BA24135A29023B950006806C /* Sonic Share.entitlements */,
+				BABEDDEB29008CFE00E9D2D2 /* Sonic Share-Bridging-Header.h */,
+				BABEDDDB29008B2700E9D2D2 /* SonicShareApp.swift */,
+				BABEDDDD29008B2700E9D2D2 /* ContentView.swift */,
+				BAA540DD2904BAA00043D4CC /* SendView.swift */,
+				BAA540DF2904D4390043D4CC /* ReceiveView.swift */,
+				BABEDDE929008BAD00E9D2D2 /* Audio System.swift */,
+				BABEDDEF29008D4E00E9D2D2 /* CAudioSystem */,
+				BABEDDDF29008B2800E9D2D2 /* Assets.xcassets */,
+				BABEDDE129008B2800E9D2D2 /* Preview Content */,
+			);
+			path = "Sonic Share";
+			sourceTree = "<group>";
+		};
+		BABEDDE129008B2800E9D2D2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BABEDDE229008B2800E9D2D2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BABEDDEF29008D4E00E9D2D2 /* CAudioSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BABEDDEC29008CFF00E9D2D2 /* CAudioSystem.mm */,
+				BABEDDEE29008D1A00E9D2D2 /* CAudioSystem.h */,
+				BABEDE112901F8A600E9D2D2 /* Shared.cpp */,
+				BABEDE122901F8A600E9D2D2 /* Shared.hpp */,
+				BABEDDF129008DC100E9D2D2 /* CReceiver.mm */,
+				BABEDDF029008DC100E9D2D2 /* CReceiver.hpp */,
+				BABEDDF329008DE000E9D2D2 /* CSender.mm */,
+				BABEDDF429008DE000E9D2D2 /* CSender.hpp */,
+				BABEDDF62900925D00E9D2D2 /* CircularBuffer.mm */,
+				BABEDDF72900925D00E9D2D2 /* CircularBuffer.hpp */,
+				BABEDE0E2900E3D700E9D2D2 /* FastTrig2Pi.cpp */,
+				BABEDE0F2900E3D700E9D2D2 /* FastTrig2Pi.hpp */,
+				BAA540DA290355090043D4CC /* HammingCode.cpp */,
+				BAA540DB290355090043D4CC /* HammingCode.hpp */,
+			);
+			path = CAudioSystem;
+			sourceTree = "<group>";
+		};
+		BABEDE0029009A7600E9D2D2 /* Sonic Share Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BABEDE0129009A7700E9D2D2 /* Circular Buffer.mm */,
+			);
+			path = "Sonic Share Tests";
+			sourceTree = "<group>";
+		};
+		BABEDE082900AB8700E9D2D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BABEDE092900AB8700E9D2D2 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BABEDDD729008B2700E9D2D2 /* Sonic Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABEDDE629008B2800E9D2D2 /* Build configuration list for PBXNativeTarget "Sonic Share" */;
+			buildPhases = (
+				BABEDDD429008B2700E9D2D2 /* Sources */,
+				BABEDDD529008B2700E9D2D2 /* Frameworks */,
+				BABEDDD629008B2700E9D2D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sonic Share";
+			productName = "Sonic Share";
+			productReference = BABEDDD829008B2700E9D2D2 /* Sonic Share.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BABEDDFE29009A7600E9D2D2 /* Sonic Share Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BABEDE0529009A7700E9D2D2 /* Build configuration list for PBXNativeTarget "Sonic Share Tests" */;
+			buildPhases = (
+				BABEDDFB29009A7600E9D2D2 /* Sources */,
+				BABEDDFC29009A7600E9D2D2 /* Frameworks */,
+				BABEDDFD29009A7600E9D2D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BABEDE0429009A7700E9D2D2 /* PBXTargetDependency */,
+			);
+			name = "Sonic Share Tests";
+			productName = "Sonic Share Tests";
+			productReference = BABEDDFF29009A7600E9D2D2 /* Sonic Share Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BABEDDD029008B2700E9D2D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BABEDDD729008B2700E9D2D2 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+					BABEDDFE29009A7600E9D2D2 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+						TestTargetID = BABEDDD729008B2700E9D2D2;
+					};
+				};
+			};
+			buildConfigurationList = BABEDDD329008B2700E9D2D2 /* Build configuration list for PBXProject "Sonic Share" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BABEDDCF29008B2700E9D2D2;
+			productRefGroup = BABEDDD929008B2700E9D2D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BABEDDD729008B2700E9D2D2 /* Sonic Share */,
+				BABEDDFE29009A7600E9D2D2 /* Sonic Share Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BABEDDD629008B2700E9D2D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABEDDE329008B2800E9D2D2 /* Preview Assets.xcassets in Resources */,
+				BABEDDE029008B2800E9D2D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABEDDFD29009A7600E9D2D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BABEDDD429008B2700E9D2D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABEDDF82900925D00E9D2D2 /* CircularBuffer.mm in Sources */,
+				BABEDDDE29008B2700E9D2D2 /* ContentView.swift in Sources */,
+				BABEDDDC29008B2700E9D2D2 /* SonicShareApp.swift in Sources */,
+				BABEDE132901F8A600E9D2D2 /* Shared.cpp in Sources */,
+				BAA540DC290355090043D4CC /* HammingCode.cpp in Sources */,
+				BABEDDEA29008BAD00E9D2D2 /* Audio System.swift in Sources */,
+				BABEDDED29008CFF00E9D2D2 /* CAudioSystem.mm in Sources */,
+				BAA540E02904D4390043D4CC /* ReceiveView.swift in Sources */,
+				BABEDDF529008DE000E9D2D2 /* CSender.mm in Sources */,
+				BAA540DE2904BAA00043D4CC /* SendView.swift in Sources */,
+				BABEDDF229008DC100E9D2D2 /* CReceiver.mm in Sources */,
+				BABEDE102900E3D700E9D2D2 /* FastTrig2Pi.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABEDDFB29009A7600E9D2D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BABEDE0229009A7700E9D2D2 /* Circular Buffer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BABEDE0429009A7700E9D2D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BABEDDD729008B2700E9D2D2 /* Sonic Share */;
+			targetProxy = BABEDE0329009A7700E9D2D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BABEDDE429008B2800E9D2D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BABEDDE529008B2800E9D2D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BABEDDE729008B2800E9D2D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Sonic Share/Sonic Share.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sonic Share/Preview Content\"";
+				DEVELOPMENT_TEAM = KDE5R52S4Z;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses microhpone to decode information from high-frequency.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuandaliu.Sonic-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sonic Share/Sonic Share-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BABEDDE829008B2800E9D2D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Sonic Share/Sonic Share.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sonic Share/Preview Content\"";
+				DEVELOPMENT_TEAM = KDE5R52S4Z;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses microhpone to decode information from high-frequency.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuandaliu.Sonic-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sonic Share/Sonic Share-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BABEDE0629009A7700E9D2D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KDE5R52S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuandaliu.Sonic-Share-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sonic Share.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sonic Share";
+			};
+			name = Debug;
+		};
+		BABEDE0729009A7700E9D2D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KDE5R52S4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.yuandaliu.Sonic-Share-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sonic Share.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sonic Share";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BABEDDD329008B2700E9D2D2 /* Build configuration list for PBXProject "Sonic Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABEDDE429008B2800E9D2D2 /* Debug */,
+				BABEDDE529008B2800E9D2D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABEDDE629008B2800E9D2D2 /* Build configuration list for PBXNativeTarget "Sonic Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABEDDE729008B2800E9D2D2 /* Debug */,
+				BABEDDE829008B2800E9D2D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BABEDE0529009A7700E9D2D2 /* Build configuration list for PBXNativeTarget "Sonic Share Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABEDE0629009A7700E9D2D2 /* Debug */,
+				BABEDE0729009A7700E9D2D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BABEDDD029008B2700E9D2D2 /* Project object */;
+}
