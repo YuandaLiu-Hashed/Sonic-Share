@@ -1,5 +1,9 @@
 # Sonic-Share
 
+This is a iOS and macOS(Catalyst) app.
+The sharing mechanism is not limited to apple system as the audio implementation is largely in C/C++.
+##NOTE: As of now, comments in codes are not always correct.
+
 ## Inspiration
 The inspiration for this project comes from the old phone-based modem internet. In the olden days, one would yank their cabled phone into a modem box, and data is transmitted through audio waves. It was a genius solution because it manages to provide internet through phone cables, which were already readily available back then, unlike internet cables. The phone modem is essentially a speaker and a microphone that "talk on the phone". Guess what also has a speaker and a microphone? Yes, literally ALL modern devices have a decent speaker and microphone. So why not bring this retro-idea of data transmission back? 
 
