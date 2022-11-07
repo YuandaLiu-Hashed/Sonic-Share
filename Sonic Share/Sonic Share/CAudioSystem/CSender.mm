@@ -36,14 +36,13 @@ AVAudioSourceNode * CSender::getSourceNode() {
 void CSender::renderAudio(bool * isSilence, double sampleTime, int frameCount, AudioBufferList * outputData) {
 	float * buffer = (float *)outputData->mBuffers->mData;
 	*isSilence = false;
-	//Max detection frequency 344Hz, sending frequency = 86Hz, 344Bits per second, 43Bytes per second.
-	//This node is always running in 48000hz.
+	
 	const long double sampleRate = this->sampleRate;
 	
 	for (int i = 0; i < frameCount; i++) {
 		const long currentFrame = (long)sampleTime + i;
 		const long double s = (long double)currentFrame / sampleRate;
-		const long double signalTimer = fmod(s * kTpSec, 1);//sending rate = 262.5times per second
+		const long double signalTimer = fmod(s * kTpSec, 1);
 		const float level = std::min((float)signalTimer / 0.1, 1.0);
 		const float oldLevel = 1.0 - level;
 		

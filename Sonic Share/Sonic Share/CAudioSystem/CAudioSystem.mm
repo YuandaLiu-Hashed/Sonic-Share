@@ -37,14 +37,12 @@
 	std::cout << "Output Sample Rate: " << outputSampleRate << std::endl;
 	std::cout << "Input Sample Rate: " << inputSampleRate << std::endl;
 	
-//	const auto format = [[AVAudioFormat alloc] initStandardFormatWithSampleRate:[[engine outputNode] outputFormatForBus:0].sampleRate channels: 1];
 	const auto format = [[AVAudioFormat alloc] initWithCommonFormat:AVAudioPCMFormatFloat32 sampleRate:outputSampleRate channels:1 interleaved:false];
 	
 	sender->changeSampleRate(outputSampleRate);
 	receiver->changeHighSampleRate(inputSampleRate == 48000);
 	
 	[engine connect:sourceNode to:[engine mainMixerNode] format: format];
-//	[engine connect:[engine inputNode] to:[engine mainMixerNode] format: format];
 	receiver->attachToInputNode([engine inputNode]);
 };
 

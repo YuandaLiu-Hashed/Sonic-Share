@@ -11,4 +11,3 @@
 
 std::bitset<16> encodeHamm15_11_SECDED(std::bitset<16> data);
 std::tuple<std::bitset<16>, bool> decodeHamm15_11_SECDED(std::bitset<16> data);
-
