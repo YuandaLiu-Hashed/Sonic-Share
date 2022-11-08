@@ -1,8 +1,8 @@
 # Sonic-Share
 
-This is a iOS and macOS(Catalyst) app.
-The sharing mechanism is not limited to apple system as the audio implementation is largely in C/C++.
-##NOTE: As of now, comments in codes are not always correct.
+This is an iOS and macOS(Catalyst) app.
+The sharing mechanism is not limited to the apple system as the audio implementation is largely in C/C++.
+The app (currently) only works for 44.1khz and 48khz audio input and outputs. The app will crash on macOS if the sample rate is larger or smaller. Changing the sample rate in Audio & Midi Setup to either of the supported sample rates will fix the issue. 
 
 ## Inspiration
 The inspiration for this project comes from the old phone-based modem internet. In the olden days, one would yank their cabled phone into a modem box, and data is transmitted through audio waves. It was a genius solution because it manages to provide internet through phone cables, which were already readily available back then, unlike internet cables. The phone modem is essentially a speaker and a microphone that "talk on the phone". Guess what also has a speaker and a microphone? Yes, literally ALL modern devices have a decent speaker and microphone. So why not bring this retro-idea of data transmission back? 
@@ -21,27 +21,29 @@ I implemented this idea, but soon realized a glaring problem: frequency interfer
 
 The solution was to only send a single frequency at once, eliminating interference once and for all. That reduced the bit rate down to ```44100/128 * 2 = 689``` bits per second. The mapping for frequencies is down below.
 ```
-[17khz = 00]
-[18khz = 01]
-[19khz = 11]
-[20khz = 10]
+17khz = 00
+18khz = 01
+19khz = 11
+20khz = 10
 ```
 
 This mapping is chosen because I also decided to implement hamming code into the transmission. Specifically, the hamming code is 16-11-SECODED hamming code. It stands for 15+1=16 total bits, 11 data bits, single error correction double error detection. This mapping is chosen because the difference between two adjacent frequencies is only a single bit difference. Thus a misinterpretation is only a single-bit error. Thus in order to transmit a byte (8 bits) 16bits are needed. This further decreased our maximum bitrate to ```44100/128 * 2 / 2 = 344``` bits per second. Mapping is as follows.
 ```
-[D = data]
-[E = parity]
 DDDDDDDD111EEEEE
+where
+D = data
+E = error correction parity
 ```
 
-However, problems keeps coming. This method is good enough for my computer with a high-end microphone and speaker. Mobile devices like my phone have a hard time decoding the signal. Thus, I increased the size of the data extraction FFT from 128 to 256 samples. This decision decreased our bitrate further by half to ```44100/128 * 2 / 4 = 172```. I then added transitions between one signal point to the next, making the high-frequency switching noise significantly less noticeable. This further decreased the bitrate from 172hz to 150hz. The size of the transmission is also provided upfront as a double-byte integer. This, along with the hamming code decoder, allows the receiver to decide whether the signal is complete or not. This is the final iteration of the communication protocol. 
+However, problems keep coming. This method is good enough for my computer with a high-end microphone and speaker. Mobile devices like my phone have a hard time decoding the signal. Thus, I increased the size of the data extraction FFT from 128 to 256 samples. This decision decreased our bitrate further by half to ```44100/128 * 2 / 4 = 172```. I then added transitions between one signal point to the next, making the high-frequency switching noise significantly less noticeable. This further decreased the bitrate from 172hz to 150hz. The size of the transmission is also provided upfront as a double-byte integer. This, along with the hamming code decoder, allows the receiver to decide whether the signal is complete or not. This is the final iteration of the communication protocol. 
 
 The UI is largely simplistic (I ran out of time).
 I built two pages. One page to send a transmission with the option of looping it. One page to receive a transmission with the option of copying it to the clipboard and opening it in a browser.
 
 ## Challenges I ran into
 
-There are many challenges.
+There are many challenges:
+
 * Challenge: Realtime audio processing needs to be, well, realtime
 * Solution: Use C/C++. Allocate buffer upfront. No allocations and deallocations while rendering audio.
 * Challenge: The signal transmission in the real world is far more error-prone than theoretical.
@@ -54,12 +56,20 @@ There are many challenges.
 ## Accomplishments that I am proud of
 * Believe it or not, this is the first time I coded something complete with a tight deadline.
 * Being able to navigate the challenges above with my expertise in C/C++.
-* Make friends along the way.
+* Made friends along the way.
 
 ## What I learned
-* Time management is important.
+* Time management is important
+* Start early when you don't know when you are going to finish
+* ```std::unique_ptr``` in c++ is good
+* How to write memory-safe, realtime-safe, thread-safe code
+* How to use atomic variables and circular buffer to accomplish the previous point
+* I am running out of ideas.
 
 ## What's next for Sonic Share
-* This app has the potential for being as popular as QR codes. It has the convenience of being able to "scan" without pointing the camera. 
-* Merchants can share their website this way. Teachers can share links this way. Friends can share data between completely different devices of different ecosystems this way.
-* I love to speak more but I really ran out of time.
+* I believe sonic share has the potential for being as popular as QR codes. It has the convenience of being able to "scan" without pointing at the camera. 
+* This transmission method is platform agnostic. People can share data between completely different devices of different ecosystems. If you have a device with a speaker and a microphone, you can sonic share.
+* At the current stage, sharing range is <1m. If I have enough time to optimize the efficiency and range, I can improve the range and bitrate further. 
+* If developed properly, this could be a new form of wireless communication. Merchants can share their websites and payment methods. Teachers can share links this way. If popularized, the limit is endless.
+* The app is demonstrated sharing of strings. But the communication code itself accepts an array of bytes(UInt8). So anything can be theoretically shared. It's just not implemented in the app.
+* Submit this post so Sonic Share can be seen by the hackGT people.
